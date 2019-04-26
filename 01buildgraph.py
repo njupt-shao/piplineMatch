@@ -61,7 +61,7 @@ def cuttrees(g):
         degree1s =  g.vs.select(_degree = 1)["name"]
         n,g = cutleaves(g)
         son_par_table.update(n)   
-        print(len(g.vs),len(degree1s))
+        # print(len(g.vs),len(degree1s))
     degree0s = g.vs.select(_degree = 0)
     g.delete_vertices(degree0s)
     return son_par_table,g
